@@ -1,0 +1,45 @@
+{
+  "appId": "com.bananaclock.app",
+  "productName": "香蕉时钟",
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "dist/**/*",
+    "dist-electron/**/*",
+    "electron/**/*"
+  ],
+  "extraResources": [
+    {
+      "from": "assets",
+      "to": "assets"
+    }
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      },
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "public/icon.ico",
+    "publisherName": "Banana Clock Team"
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "香蕉时钟",
+    "uninstallDisplayName": "香蕉时钟"
+  },
+  "portable": {
+    "artifactName": "BananaClock-Portable.exe"
+  },
+  "publish": null
+}

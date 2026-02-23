@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 13%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+    --border: 0 0% 90%;
+    --input: 0 0% 95%;
+    --ring: 0 0% 76%;
+    --radius: 0.75rem;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+  }
+
+  .dark {
+    --background: 0 0% 13%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 13%;
+    --card-foreground: 0 0% 98%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 0 0% 40%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-lg;
+  }
+  
+  .timer-digit {
+    font-variant-numeric: tabular-nums;
+  }
+}
